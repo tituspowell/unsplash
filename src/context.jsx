@@ -8,6 +8,7 @@ export const useGlobalContext = () => {
 
 export const ContextProvider = ({ children }) => {
   const [isDarkTheme, setIsDarkTheme] = useState(true);
+  const [searchPhrase, setSearchPhrase] = useState('');
 
   const toggleDarkTheme = () => {
     const newDarkTheme = !isDarkTheme;
@@ -17,7 +18,9 @@ export const ContextProvider = ({ children }) => {
   };
 
   return (
-    <globalContext.Provider value={{ isDarkTheme, toggleDarkTheme }}>
+    <globalContext.Provider
+      value={{ isDarkTheme, toggleDarkTheme, searchPhrase, setSearchPhrase }}
+    >
       {children}
     </globalContext.Provider>
   );
