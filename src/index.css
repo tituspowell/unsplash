@@ -278,14 +278,24 @@ PROJECT CSS
 ========
 */
 
-.body {
-  background-color: white;
-  color: black;
+:root {
+  --light-theme-background-color: white;
+  --light-theme-text-color: black;
+  --dark-theme-background-color: #0f172a;
+  --dark-theme-text-color: #f0f0f0;
+
+  --dark-mode-transition: color 1s ease-in-out, background-color 1s ease-in-out;
 }
 
 .dark-theme {
-  background-color: var(--grey-900);
-  color: white;
+  background-color: var(--dark-theme-background-color);
+  color: var(--dark-theme-text-color);
+}
+
+.body {
+  transition: var(--dark-mode-transition);
+  background-color: var(--light-theme-background-color);
+  color: var(--light-theme-text-color);
 }
 
 .dark-theme .dark-toggle {
