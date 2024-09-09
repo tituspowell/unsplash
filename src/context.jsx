@@ -13,9 +13,7 @@ export const ContextProvider = ({ children }) => {
     const newDarkTheme = !isDarkTheme;
     setIsDarkTheme(newDarkTheme);
 
-    const body = document.querySelector('body');
-    body.classList.toggle('dark-theme', newDarkTheme);
-    console.log(body.classList);
+    document.body.classList.toggle('dark-theme', newDarkTheme);
   };
 
   return (

@@ -278,6 +278,21 @@ PROJECT CSS
 ========
 */
 
+.body {
+  background-color: white;
+  color: black;
+}
+
+.dark-theme {
+  background-color: var(--grey-900);
+  color: white;
+}
+
+.dark-theme .dark-toggle {
+  background-color: var(--grey-900);
+  color: white;
+}
+
 /* 
 ========
 Toggle Container
