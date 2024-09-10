@@ -8,7 +8,7 @@ export const useGlobalContext = () => {
 
 export const ContextProvider = ({ children }) => {
   const [isDarkTheme, setIsDarkTheme] = useState(true);
-  const [searchPhrase, setSearchPhrase] = useState('');
+  const [searchPhrase, setSearchPhrase] = useState('cat');
 
   const toggleDarkTheme = () => {
     const newDarkTheme = !isDarkTheme;
