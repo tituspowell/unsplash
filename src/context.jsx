@@ -7,6 +7,11 @@ export const useGlobalContext = () => {
 };
 
 const getInitialDarkMode = () => {
+  const storedPreference = Boolean(localStorage.getItem('darkTheme'));
+  if (storedPreference !== null) {
+    return storedPreference;
+  }
+
   const prefersDarkMode = window.matchMedia(
     '(prefers-color-scheme:dark)'
   ).matches;
@@ -20,6 +25,7 @@ export const ContextProvider = ({ children }) => {
   const toggleDarkTheme = () => {
     const newDarkTheme = !isDarkTheme;
     setIsDarkTheme(newDarkTheme);
+    localStorage.setItem('darkTheme', newDarkTheme);
   };
 
   useEffect(() => {
