@@ -5,12 +5,11 @@ import axios from 'axios';
 // REMOVE THE UNSPLASH API KEY BEFORE DEPLOYING, FELLA...
 
 const baseURL = 'https://api.unsplash.com/search/photos';
-const params =
-  '?page=1&client_id=HeumkG2NOb1CfEnaeX-Eg-bLKk1nFnOfO_QG8x_7JFE&query=';
+const params = `?page=1&client_id=${import.meta.env.VITE_API_KEY}`;
 
 const Gallery = () => {
   const { searchPhrase } = useGlobalContext();
-  const url = `${baseURL}${params}${searchPhrase}`;
+  const url = `${baseURL}${params}&query=${searchPhrase}`;
 
   const response = useQuery({
     queryKey: ['images', searchPhrase],
