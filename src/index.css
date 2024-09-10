@@ -331,14 +331,17 @@ Toggle Container
   font-size: 1.5rem;
   color: var(--textColor);
 }
+
 /* 
 ========
 Search Form
 ========
 */
+
 .title {
   color: var(--primary-500);
 }
+
 .search-form {
   width: var(--view-width);
   max-width: var(--fixed-width);
@@ -353,8 +356,6 @@ Search Form
   transition: var(--darkModeTransition);
   color: var(--textColor);
   border-radius: 0;
-
-  /* border-right: none; */
 }
 
 .search-form .btn {
