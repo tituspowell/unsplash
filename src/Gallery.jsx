@@ -14,7 +14,7 @@ const Gallery = () => {
   console.log('Requesting Unsplash images for search term: ' + searchPhrase);
 
   const response = useQuery({
-    queryKey: ['images'],
+    queryKey: ['images', searchPhrase],
     queryFn: async () => {
       const result = await axios.get(url);
       return result.data;
