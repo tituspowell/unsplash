@@ -11,7 +11,6 @@ const params =
 const Gallery = () => {
   const { searchPhrase } = useGlobalContext();
   const url = `${baseURL}${params}${searchPhrase}`;
-  console.log('Requesting Unsplash images for search term: ' + searchPhrase);
 
   const response = useQuery({
     queryKey: ['images', searchPhrase],

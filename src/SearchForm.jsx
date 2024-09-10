@@ -9,11 +9,10 @@ const SearchForm = () => {
     e.preventDefault();
     setSearchPhrase(inputText);
     setInputText('');
-    console.log(inputText);
   };
 
   return (
-    <form onSubmit={handleSubmit}>
+    <form onSubmit={handleSubmit} className='search-form'>
       <input
         type='text'
         name='search'
